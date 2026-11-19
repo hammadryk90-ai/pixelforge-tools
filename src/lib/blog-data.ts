@@ -1,0 +1,134 @@
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+  category: string;
+  relatedTool: { href: string; label: string };
+  sections: { heading: string; paragraphs: string[] }[];
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    slug: "how-to-compress-images-without-losing-quality",
+    title: "How to Compress Images Without Losing Visible Quality",
+    description:
+      "Learn practical compression settings, resolution guidelines, and format choices to shrink image file sizes by up to 80% for websites and forms.",
+    date: "2026-11-10",
+    readTime: "4 min read",
+    category: "Optimization",
+    relatedTool: { href: "/compress-image", label: "Try Image Compressor" },
+    sections: [
+      {
+        heading: "Why File Size Matters for Speed and SEO",
+        paragraphs: [
+          "Large, uncompressed images are one of the most common reasons websites feel slow on mobile connections. Search engines evaluate page speed as part of Core Web Vitals, meaning smaller, well-optimized images directly support better rankings and lower bounce rates.",
+          "Online portals, job boards, and visa or university application forms also enforce strict file-size limits—often 200 KB to 1 MB per upload. Compressing your image before uploading prevents frustrating upload errors.",
+        ],
+      },
+      {
+        heading: "The Sweet Spot: 70% to 80% Quality",
+        paragraphs: [
+          "Exporting a JPEG or WebP at 100% quality rarely looks better to the human eye than 75% quality, yet a 100% file can be three to five times larger. For almost all photographs, setting compression quality between 70% and 80% removes redundant color data that human vision barely perceives.",
+        ],
+      },
+      {
+        heading: "Resize Before You Compress",
+        paragraphs: [
+          "A modern phone camera captures images at 4000×3000 pixels or higher. If the image will only appear inside a blog post or email, resizing the maximum width to 1280px or 1920px cuts the pixel count by more than half before compression even begins.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "jpg-vs-png-vs-webp-which-format-to-use",
+    title: "JPG vs PNG vs WebP: Which Image Format Should You Use?",
+    description:
+      "A clear comparison of JPEG, PNG, and WebP formats so you always pick the smallest and sharpest option for photos, screenshots, and web graphics.",
+    date: "2026-11-12",
+    readTime: "5 min read",
+    category: "Formats",
+    relatedTool: { href: "/compress-image", label: "Convert & Compress Now" },
+    sections: [
+      {
+        heading: "JPEG (JPG): Best for Universal Compatibility",
+        paragraphs: [
+          "JPEG uses lossy compression designed specifically for real-world photography with smooth gradients and millions of colors. Every device, email client, and government upload portal supports JPEG.",
+        ],
+      },
+      {
+        heading: "PNG: Best for Sharp Text, Logos & Transparency",
+        paragraphs: [
+          "PNG uses lossless compression, preserving every pixel edge without compression artifacts. It is ideal for screenshots, UI mockups, logos, and images requiring a transparent background—though file sizes are larger for photographs.",
+        ],
+      },
+      {
+        heading: "WebP: Best for Modern Websites",
+        paragraphs: [
+          "Developed for the web, WebP delivers 25% to 35% smaller file sizes than JPEG at equivalent visual quality and also supports transparency. All modern browsers support WebP natively.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-convert-images-to-pdf-safely",
+    title: "How to Convert Photos and Scans to PDF Without Uploading Private Files",
+    description:
+      "Why client-side Image-to-PDF conversion protects your IDs, receipts, and contracts—and how to format A4 or Letter pages cleanly.",
+    date: "2026-11-15",
+    readTime: "4 min read",
+    category: "PDF Workflow",
+    relatedTool: { href: "/image-to-pdf", label: "Open Image to PDF" },
+    sections: [
+      {
+        heading: "The Privacy Risk of Server-Side Converters",
+        paragraphs: [
+          "People frequently convert sensitive documents—passports, bank statements, medical receipts, and signed contracts—into PDFs. Many free online tools upload those files to remote cloud servers, where you have no visibility into how long they are stored.",
+        ],
+      },
+      {
+        heading: "Client-Side PDF Generation Explained",
+        paragraphs: [
+          "With browser-based processing, your images are read directly from local memory, arranged onto A4 or US Letter pages, and compiled into a downloadable PDF right on your own device. Nothing is transmitted over the internet.",
+        ],
+      },
+      {
+        heading: "Tips for Clean Multi-Page PDFs",
+        paragraphs: [
+          "Use Auto orientation when mixing portrait scans and landscape receipts, and add a small 10mm margin if the PDF will be printed on office paper so edges are never clipped.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-improve-image-quality-and-sharpness",
+    title: "5 Practical Ways to Fix Blurry or Low-Contrast Photos Online",
+    description:
+      "Simple techniques to sharpen soft edges, balance brightness and contrast, and upscale low-resolution images directly in your browser.",
+    date: "2026-11-18",
+    readTime: "4 min read",
+    category: "Enhancement",
+    relatedTool: { href: "/enhance-image", label: "Try Quality Enhancer" },
+    sections: [
+      {
+        heading: "1. Apply Subtle Edge Sharpening",
+        paragraphs: [
+          "Photos shared over messaging apps often lose crispness due to aggressive downscaling. A moderate sharpening filter (30% to 50%) restores edge definition around faces, product labels, and scanned text without introducing harsh noise.",
+        ],
+      },
+      {
+        heading: "2. Boost Contrast Gently",
+        paragraphs: [
+          "Hazy or flat-looking photos usually suffer from low dynamic range. Increasing contrast by +10 to +15 separates shadows from highlights and makes colors look richer immediately.",
+        ],
+      },
+      {
+        heading: "3. Upscale Responsibly (1.5x or 2x)",
+        paragraphs: [
+          "When you need a slightly larger image for a presentation slide or print layout, a 1.5x or 2x upscale paired with light sharpening prevents jagged pixelation.",
+        ],
+      },
+    ],
+  },
+];

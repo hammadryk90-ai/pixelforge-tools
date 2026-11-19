@@ -1,0 +1,100 @@
+import Link from "next/link";
+import { Sparkles, ShieldCheck } from "lucide-react";
+import { siteConfig } from "@/lib/site-config";
+
+export default function Footer() {
+  const year = 2026;
+
+  return (
+    <footer className="mt-auto border-t border-slate-200 bg-slate-50 text-slate-600">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="space-y-3">
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-base font-bold text-slate-900"
+            >
+              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600 text-white">
+                <Sparkles className="h-3.5 w-3.5" />
+              </span>
+              <span>{siteConfig.fullName}</span>
+            </Link>
+            <p className="text-sm leading-relaxed text-slate-600">
+              Fast, free, and private image optimization and PDF conversion tools.
+              All processing runs locally inside your browser.
+            </p>
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
+              <ShieldCheck className="h-3.5 w-3.5" />
+              100% Client-Side Privacy
+            </div>
+          </div>
+
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-slate-900">Tools</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/compress-image" className="hover:text-indigo-600">
+                  Image Compressor
+                </Link>
+              </li>
+              <li>
+                <Link href="/enhance-image" className="hover:text-indigo-600">
+                  Image Quality Enhancer
+                </Link>
+              </li>
+              <li>
+                <Link href="/image-to-pdf" className="hover:text-indigo-600">
+                  Image to PDF Converter
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-slate-900">Resources</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/blog" className="hover:text-indigo-600">
+                  Guides & Tutorials
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-indigo-600">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-indigo-600">
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-slate-900">Legal</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/privacy-policy" className="hover:text-indigo-600">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="hover:text-indigo-600">
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-6 text-xs text-slate-500 sm:flex-row">
+          <p>
+            &copy; {year} {siteConfig.fullName}. All rights reserved.
+          </p>
+          <p>Built for speed, accessibility, and privacy.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
