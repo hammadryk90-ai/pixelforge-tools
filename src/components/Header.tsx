@@ -8,6 +8,7 @@ import { siteConfig } from "@/lib/site-config";
 
 const navLinks = [
   { href: "/compress-image", label: "Compress Image" },
+  { href: "/compress-to-kb", label: "Compress to KB" },
   { href: "/enhance-image", label: "Enhance Quality" },
   { href: "/image-to-pdf", label: "Image to PDF" },
   { href: "/blog", label: "Guides" },

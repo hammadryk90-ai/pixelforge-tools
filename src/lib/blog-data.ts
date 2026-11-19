@@ -131,4 +131,112 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "how-to-compress-photo-to-100kb-for-online-forms",
+    title: "How to Compress a Photo to 100KB for Passport, Visa & Job Forms",
+    description:
+      "Step-by-step guide to shrinking smartphone photos under 100KB or 50KB without blurring your face or document text.",
+    date: "2026-11-19",
+    readTime: "4 min read",
+    category: "Forms & Portals",
+    relatedTool: { href: "/compress-to-kb", label: "Compress to Exact KB" },
+    sections: [
+      {
+        heading: "Why Portals Reject Normal Phone Photos",
+        paragraphs: [
+          "A standard smartphone photo is usually 3 MB to 6 MB (3,000–6,000 KB), whereas visa, university, and government job portals typically enforce strict 50 KB to 200 KB upload limits.",
+        ],
+      },
+      {
+        heading: "Crop First, Then Compress to Target KB",
+        paragraphs: [
+          "Always crop out extra background before compressing. When the photo only contains your head and shoulders (or the document itself), hitting 100 KB preserves much sharper facial and text details.",
+        ],
+      },
+      {
+        heading: "Use JPEG for Maximum Compatibility",
+        paragraphs: [
+          "Most official portals only accept .jpg or .jpeg files. Our Exact KB Compressor automatically finds the highest possible JPEG quality that stays safely below your KB limit.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-reduce-image-size-to-50kb-without-losing-clarity",
+    title: "How to Reduce Image Size to 50KB Without Losing Clarity",
+    description:
+      "Learn how to fit signatures, ID photos, and thumbnails under 50KB while keeping edges readable and clean.",
+    date: "2026-11-19",
+    readTime: "3 min read",
+    category: "Optimization",
+    relatedTool: { href: "/compress-to-kb", label: "Open 50KB Compressor" },
+    sections: [
+      {
+        heading: "Understanding Dimension vs. Quality Trade-offs",
+        paragraphs: [
+          "Trying to squeeze a 4000px-wide image under 50 KB using quality alone creates heavy blockiness. Scaling the width down to 600px–800px first allows a clean 65–75% quality setting to fit comfortably under 50 KB.",
+        ],
+      },
+      {
+        heading: "Tips for Signatures and Handwritten Scans",
+        paragraphs: [
+          "Before compressing a signature or ID scan, slightly increase contrast so the background is pure white and the ink is dark. High contrast compresses into smaller files with sharper edges.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-make-scanned-documents-clearer-for-pdf",
+    title: "How to Make Blurry Document Scans Clearer Before Converting to PDF",
+    description:
+      "Fix dim lighting and soft text on phone-captured documents before merging them into a clean, printable PDF.",
+    date: "2026-11-20",
+    readTime: "4 min read",
+    category: "PDF Workflow",
+    relatedTool: { href: "/enhance-image", label: "Enhance Document Scan" },
+    sections: [
+      {
+        heading: "Step 1: Brighten & Boost Contrast",
+        paragraphs: [
+          "Phone photos of paper documents often look gray or shadowy. Increasing brightness by +8 and contrast by +15 makes the paper look crisp white and the printed text dark and legible.",
+        ],
+      },
+      {
+        heading: "Step 2: Apply Moderate Sharpening",
+        paragraphs: [
+          "Setting Sharpness between 40% and 60% tightens letter edges so small fonts remain readable even after exporting to PDF.",
+        ],
+      },
+      {
+        heading: "Step 3: Export as A4 PDF",
+        paragraphs: [
+          "Once enhanced, drop your pages into our Image to PDF Converter, choose A4 with a 10mm margin, and download a single clean document.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "best-image-size-and-format-for-website-seo",
+    title: "Best Image Size and Format for Website Speed & Google SEO",
+    description:
+      "Practical image dimensions, target KB ranges, and WebP guidelines to pass Core Web Vitals and improve search rankings.",
+    date: "2026-11-20",
+    readTime: "5 min read",
+    category: "SEO & Web",
+    relatedTool: { href: "/compress-image", label: "Optimize Web Images" },
+    sections: [
+      {
+        heading: "Target File Sizes for Fast Loading",
+        paragraphs: [
+          "For hero banners, aim for under 150 KB; for blog post images and product cards, aim for 40 KB to 90 KB. Keeping total page image weight low directly improves Largest Contentful Paint (LCP).",
+        ],
+      },
+      {
+        heading: "Why WebP Should Be Your Default",
+        paragraphs: [
+          "Converting JPEG and PNG assets to WebP typically cuts file size by 25–35% without visible quality loss, helping mobile visitors load pages faster on slower connections.",
+        ],
+      },
+    ],
+  },
 ];

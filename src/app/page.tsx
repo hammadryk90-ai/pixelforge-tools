@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   Minimize2,
+  Gauge,
   Sparkles,
   FileText,
   ShieldCheck,
@@ -21,10 +22,18 @@ const tools = [
     badge: "Batch Supported",
   },
   {
+    href: "/compress-to-kb",
+    title: "Compress to Exact KB",
+    description:
+      "Hit exact 20KB, 50KB, 100KB, or 200KB limits automatically for passport, visa, and job forms.",
+    icon: Gauge,
+    badge: "Exact Size",
+  },
+  {
     href: "/enhance-image",
     title: "Image Quality Enhancer",
     description:
-      "Sharpen soft details, balance contrast & color, and upscale resolution up to 2x with live before/after preview.",
+      "Sharpen soft details, balance contrast & color, and upscale resolution up to 2x with live preview.",
     icon: Sparkles,
     badge: "Live Slider",
   },
@@ -85,7 +94,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {tools.map((tool) => {
             const Icon = tool.icon;
             return (

@@ -194,3 +194,78 @@ export async function enhanceImage(
     height: targetHeight,
   };
 }
+
+export async function compressToTargetKb(
+  file: File,
+  targetKb: number,
+  format: "image/jpeg" | "image/webp" = "image/jpeg"
+): Promise<CompressResult> {
+  const img = await loadImageFromFile(file);
+  const targetBytes = Math.max(5, targetKb) * 1024;
+
+  let scale = 1;
+  let bestBlob: Blob | null = null;
+  let bestW = img.naturalWidth;
+  let bestH = img.naturalHeight;
+
+  const renderAt = (w: number, h: number, q: number): Promise<Blob> => {
+    const canvas = document.createElement("canvas");
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("Canvas 2D context is not available");
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
+    ctx.drawImage(img, 0, 0, w, h);
+    return new Promise((resolve, reject) => {
+      canvas.toBlob(
+        (b) => (b ? resolve(b) : reject(new Error("Compression failed"))),
+        format,
+        q
+      );
+    });
+  };
+
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const w = Math.max(100, Math.round(img.naturalWidth * scale));
+    const h = Math.max(100, Math.round(img.naturalHeight * scale));
+
+    let low = 0.08;
+    let high = 0.95;
+    let candidate: Blob | null = null;
+
+    for (let i = 0; i < 7; i++) {
+      const mid = (low + high) / 2;
+      const blob = await renderAt(w, h, mid);
+      if (blob.size <= targetBytes) {
+        candidate = blob;
+        low = mid;
+      } else {
+        high = mid;
+      }
+    }
+
+    if (candidate) {
+      bestBlob = candidate;
+      bestW = w;
+      bestH = h;
+      break;
+    }
+
+    // Even at low quality it exceeded targetBytes; downscale and retry
+    bestBlob = await renderAt(w, h, 0.08);
+    bestW = w;
+    bestH = h;
+    scale *= 0.72;
+  }
+
+  if (!bestBlob) throw new Error("Unable to compress image to target size");
+
+  return {
+    blob: bestBlob,
+    url: URL.createObjectURL(bestBlob),
+    width: bestW,
+    height: bestH,
+    mimeType: format,
+  };
+}
