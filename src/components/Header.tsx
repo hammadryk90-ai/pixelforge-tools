@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
+import BrandLogo from "@/components/BrandLogo";
 
 const navLinks = [
   { href: "/compress-image", label: "Compress" },
@@ -24,11 +25,9 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
         <Link
           href="/"
-          className="flex items-center gap-2 text-lg font-bold tracking-tight text-slate-900"
+          className="flex items-center gap-2.5 text-lg font-bold tracking-tight text-slate-900"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-white">
-            <Sparkles className="h-4 w-4" />
-          </span>
+          <BrandLogo className="h-8 w-8 shadow-xs" />
           <span>{siteConfig.name}</span>
         </Link>
 

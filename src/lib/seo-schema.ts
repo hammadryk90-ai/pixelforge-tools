@@ -8,10 +8,20 @@ export interface FaqItem {
 export function buildWebSiteSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: siteConfig.fullName,
-    url: siteConfig.url,
-    description: siteConfig.description,
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: siteConfig.fullName,
+        url: siteConfig.url,
+        description: siteConfig.description,
+      },
+      {
+        "@type": "Organization",
+        name: siteConfig.fullName,
+        url: siteConfig.url,
+        logo: `${siteConfig.url}/icon`,
+      },
+    ],
   };
 }
 

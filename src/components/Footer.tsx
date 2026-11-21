@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Sparkles, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
+import BrandLogo from "@/components/BrandLogo";
 
 export default function Footer() {
   const year = 2026;
@@ -14,9 +15,7 @@ export default function Footer() {
               href="/"
               className="flex items-center gap-2 text-base font-bold text-slate-900"
             >
-              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600 text-white">
-                <Sparkles className="h-3.5 w-3.5" />
-              </span>
+              <BrandLogo className="h-7 w-7" />
               <span>{siteConfig.fullName}</span>
             </Link>
             <p className="text-sm leading-relaxed text-slate-600">
