@@ -4,8 +4,8 @@ export const siteConfig = {
   tagline: "Free, Private Browser-Based Image & PDF Tools",
   description:
     "Compress images to smaller sizes, enhance photo quality, and convert images to PDF instantly in your browser. 100% free, no file uploads, complete privacy.",
-  // Replace with your actual domain once deployed (e.g., "https://pixelforgetools.com")
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://pixelforgetools.com",
+  // Primary production domain
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://pixelforgeimg.com",
   // Support email shown on Contact, Privacy Policy, and Terms pages
   supportEmail: "Hammadryk90@gmail.com",
   // Add your Google AdSense Publisher ID in .env.local as NEXT_PUBLIC_ADSENSE_ID=ca-pub-XXXXXXXXXXXXXXXX
