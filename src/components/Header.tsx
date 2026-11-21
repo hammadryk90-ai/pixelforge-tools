@@ -9,6 +9,7 @@ import BrandLogo from "@/components/BrandLogo";
 
 const navLinks = [
   { href: "/compress-image", label: "Compress" },
+  { href: "/convert-image", label: "Convert" },
   { href: "/compress-to-kb", label: "Exact KB" },
   { href: "/photo-editor", label: "Photo Editor" },
   { href: "/enhance-image", label: "Enhance" },

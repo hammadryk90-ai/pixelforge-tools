@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/compress-image",
+    "/convert-image",
     "/compress-to-kb",
     "/photo-editor",
     "/enhance-image",

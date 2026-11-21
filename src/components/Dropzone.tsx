@@ -23,8 +23,9 @@ export default function Dropzone({
 
   const handleFiles = (fileList: FileList | null) => {
     if (!fileList || fileList.length === 0) return;
-    const valid = Array.from(fileList).filter((f) =>
-      f.type.startsWith("image/")
+    const valid = Array.from(fileList).filter(
+      (f) =>
+        f.type.startsWith("image/") || /\.(heic|heif)$/i.test(f.name)
     );
     if (valid.length > 0) {
       onFilesSelected(valid);

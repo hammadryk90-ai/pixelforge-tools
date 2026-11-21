@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   Minimize2,
+  ArrowLeftRight,
   Gauge,
   SlidersHorizontal,
   Sparkles,
@@ -30,6 +31,18 @@ const tools = [
     badgeStyle: "bg-indigo-50 text-indigo-700",
     hoverBorder: "hover:border-indigo-300",
     linkColor: "text-indigo-600",
+  },
+  {
+    href: "/convert-image",
+    title: "Image Format Converter",
+    description:
+      "Convert iPhone HEIC to JPEG, switch between PNG, JPEG, WebP & AVIF, or auto-pick the smallest format.",
+    icon: ArrowLeftRight,
+    badge: "HEIC & AVIF",
+    iconBg: "bg-sky-100 text-sky-600 group-hover:bg-sky-600 group-hover:text-white",
+    badgeStyle: "bg-sky-50 text-sky-700",
+    hoverBorder: "hover:border-sky-300",
+    linkColor: "text-sky-600",
   },
   {
     href: "/compress-to-kb",

@@ -37,6 +37,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/convert-image" className="hover:text-indigo-600">
+                  Format Converter (HEIC / WebP / AVIF)
+                </Link>
+              </li>
+              <li>
                 <Link href="/compress-to-kb" className="hover:text-indigo-600">
                   Compress to Exact KB
                 </Link>
