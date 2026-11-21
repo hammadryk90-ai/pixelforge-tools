@@ -61,18 +61,19 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-white text-slate-900">
-        {siteConfig.googleTagId && (
+        {siteConfig.gaMeasurementId && (
           <>
             <Script
               async
-              src={`https://www.googletagmanager.com/gtm.js?id=${siteConfig.googleTagId}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.gaMeasurementId}`}
               strategy="afterInteractive"
             />
-            <Script id="google-tag-init" strategy="afterInteractive">
+            <Script id="google-analytics-init" strategy="afterInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
+                gtag('config', '${siteConfig.gaMeasurementId}');
               `}
             </Script>
           </>
