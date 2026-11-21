@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/photo-editor",
     "/enhance-image",
     "/image-to-pdf",
+    "/pdf-tools",
     "/blog",
     "/about",
     "/contact",

@@ -11,9 +11,10 @@ const navLinks = [
   { href: "/compress-image", label: "Compress" },
   { href: "/convert-image", label: "Convert" },
   { href: "/compress-to-kb", label: "Exact KB" },
-  { href: "/photo-editor", label: "Photo Editor" },
+  { href: "/photo-editor", label: "Editor" },
   { href: "/enhance-image", label: "Enhance" },
-  { href: "/image-to-pdf", label: "Image to PDF" },
+  { href: "/image-to-pdf", label: "Img to PDF" },
+  { href: "/pdf-tools", label: "PDF Tools" },
   { href: "/blog", label: "Guides" },
 ];
 

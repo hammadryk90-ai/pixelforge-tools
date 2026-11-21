@@ -6,6 +6,7 @@ import {
   SlidersHorizontal,
   Sparkles,
   FileText,
+  Files,
   ShieldCheck,
   Zap,
   Globe,
@@ -92,6 +93,18 @@ const tools = [
     badgeStyle: "bg-violet-50 text-violet-700",
     hoverBorder: "hover:border-violet-300",
     linkColor: "text-violet-600",
+  },
+  {
+    href: "/pdf-tools",
+    title: "PDF Toolkit",
+    description:
+      "Merge PDFs, split or extract specific pages, stamp text watermarks, and add page numbers privately.",
+    icon: Files,
+    badge: "Merge & Split",
+    iconBg: "bg-teal-100 text-teal-600 group-hover:bg-teal-600 group-hover:text-white",
+    badgeStyle: "bg-teal-50 text-teal-700",
+    hoverBorder: "hover:border-teal-300",
+    linkColor: "text-teal-600",
   },
 ];
 

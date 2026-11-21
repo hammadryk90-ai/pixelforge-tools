@@ -61,6 +61,11 @@ export default function Footer() {
                   Image to PDF Converter
                 </Link>
               </li>
+              <li>
+                <Link href="/pdf-tools" className="hover:text-indigo-600">
+                  PDF Toolkit (Merge / Split / Watermark)
+                </Link>
+              </li>
             </ul>
           </div>
 
