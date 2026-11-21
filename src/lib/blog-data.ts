@@ -269,4 +269,34 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "how-to-convert-iphone-heic-photos-to-jpg-on-windows-free",
+    title: "How to Convert iPhone HEIC Photos to JPG on Windows for Free",
+    description:
+      "Fix incompatible iPhone .heic photos on Windows PCs and online upload portals by converting them to universal JPEG files privately in your browser.",
+    date: "2026-11-22",
+    readTime: "4 min read",
+    category: "Formats",
+    relatedTool: { href: "/convert-image", label: "Open HEIC to JPEG Converter" },
+    sections: [
+      {
+        heading: "Why Windows and Online Portals Reject HEIC Files",
+        paragraphs: [
+          "Modern iPhones save camera photos in Apple's High Efficiency Image Container (.heic) format to save storage space. While great on iOS, many Windows photo viewers, office apps, and government or job application portals still only accept standard .jpg or .png images.",
+        ],
+      },
+      {
+        heading: "Convert HEIC to JPEG Without Uploading Personal Photos",
+        paragraphs: [
+          "Instead of uploading private family photos or scanned IDs to remote cloud converters, open PixelForge's Image Format Converter, select JPEG as the target format, and drop your .heic files in. Every file is decoded and converted directly inside your browser memory.",
+        ],
+      },
+      {
+        heading: "Batch Convert and Shrink Size if Needed",
+        paragraphs: [
+          "You can drop multiple HEIC files at once and adjust the quality slider to 80–85% for a clean balance of sharpness and smaller file size. If an online form requires a strict 100KB limit, pass the converted JPEG through our Exact KB Compressor afterward.",
+        ],
+      },
+    ],
+  },
 ];
