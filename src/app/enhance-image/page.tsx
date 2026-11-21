@@ -1,16 +1,39 @@
 import type { Metadata } from "next";
 import ImageEnhancerTool from "@/components/tools/ImageEnhancerTool";
 import AdSlot from "@/components/AdSlot";
+import JsonLd from "@/components/JsonLd";
+import { buildToolSchema } from "@/lib/seo-schema";
 
 export const metadata: Metadata = {
   title: "Free Image Quality Enhancer & Upscaler — Sharpen Photos Online",
   description:
     "Improve image quality, sharpen blurry edges, balance lighting, and upscale resolution up to 2x right in your browser. Free and 100% private.",
+  alternates: { canonical: "/enhance-image" },
 };
 
 export default function EnhanceImagePage() {
+  const schema = buildToolSchema({
+    name: "PixelForge Image Quality Enhancer & Upscaler",
+    description:
+      "Sharpen soft details, balance contrast and color vibrance, and upscale photos up to 2x in your browser.",
+    path: "/enhance-image",
+    faqs: [
+      {
+        question: "What is the best setting for blurry document scans?",
+        answer:
+          "Try setting Sharpness to 45-60%, Contrast to +15, and Upscale to 1.5x, then download as PNG for crisp text.",
+      },
+      {
+        question: "Is there a file limit or watermark?",
+        answer:
+          "No watermarks and no daily limits. Because everything runs on your own device, you can enhance as many images as you like.",
+      },
+    ],
+  });
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+      <JsonLd data={schema} />
       <div className="mb-8 text-center">
         <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
           Image Quality Enhancer &amp; Upscaler

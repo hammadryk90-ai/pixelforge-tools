@@ -1,16 +1,39 @@
 import type { Metadata } from "next";
 import ImageToPdfTool from "@/components/tools/ImageToPdfTool";
 import AdSlot from "@/components/AdSlot";
+import JsonLd from "@/components/JsonLd";
+import { buildToolSchema } from "@/lib/seo-schema";
 
 export const metadata: Metadata = {
   title: "Free Image to PDF Converter — Combine JPG & PNG to PDF Online",
   description:
     "Convert JPG, PNG, and WebP images into a single multi-page PDF document in seconds. Reorder pages, pick A4 or Letter, and download privately.",
+  alternates: { canonical: "/image-to-pdf" },
 };
 
 export default function ImageToPdfPage() {
+  const schema = buildToolSchema({
+    name: "PixelForge Image to PDF Converter",
+    description:
+      "Combine JPG, PNG, and WebP images into a multi-page A4 or Letter PDF document locally in your browser.",
+    path: "/image-to-pdf",
+    faqs: [
+      {
+        question: "Can I combine multiple photos into one PDF?",
+        answer:
+          "Yes! You can add as many images as you need, reorder them, and export them all into a single multi-page PDF file.",
+      },
+      {
+        question: "Are my documents stored anywhere?",
+        answer:
+          "Never. Once you close or refresh the tab, all temporary browser memory is cleared automatically.",
+      },
+    ],
+  });
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+      <JsonLd data={schema} />
       <div className="mb-8 text-center">
         <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
           Free Image to PDF Converter

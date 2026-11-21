@@ -39,6 +39,11 @@ export const metadata: Metadata = {
     title: `${siteConfig.fullName} — Free Image Compressor, Enhancer & Image to PDF`,
     description: siteConfig.description,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.fullName} — Free Image Compressor, Enhancer & Image to PDF`,
+    description: siteConfig.description,
+  },
   robots: {
     index: true,
     follow: true,

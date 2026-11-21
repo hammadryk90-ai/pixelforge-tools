@@ -1,16 +1,39 @@
 import type { Metadata } from "next";
 import ImageCompressorTool from "@/components/tools/ImageCompressorTool";
 import AdSlot from "@/components/AdSlot";
+import JsonLd from "@/components/JsonLd";
+import { buildToolSchema } from "@/lib/seo-schema";
 
 export const metadata: Metadata = {
   title: "Free Online Image Compressor — Reduce JPG, PNG & WebP Size",
   description:
     "Compress JPG, PNG, and WebP images to smaller file sizes without losing visible quality. 100% private client-side compression in your browser.",
+  alternates: { canonical: "/compress-image" },
 };
 
 export default function CompressImagePage() {
+  const schema = buildToolSchema({
+    name: "PixelForge Free Online Image Compressor",
+    description:
+      "Compress JPG, PNG, and WebP images to smaller file sizes without losing visible quality.",
+    path: "/compress-image",
+    faqs: [
+      {
+        question: "Are my images uploaded to a server?",
+        answer:
+          "No. PixelForge processes every image directly inside your web browser using the HTML5 Canvas API. Your photos never leave your device.",
+      },
+      {
+        question: "Which output format should I pick?",
+        answer:
+          "Use WebP for websites and blogs, JPEG for universal compatibility, and PNG when you need crisp graphics or transparency.",
+      },
+    ],
+  });
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+      <JsonLd data={schema} />
       <div className="mb-8 text-center">
         <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
           Free Online Image Compressor

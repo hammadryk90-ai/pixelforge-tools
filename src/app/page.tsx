@@ -10,7 +10,9 @@ import {
   ArrowRight,
 } from "lucide-react";
 import AdSlot from "@/components/AdSlot";
+import JsonLd from "@/components/JsonLd";
 import { blogPosts } from "@/lib/blog-data";
+import { buildWebSiteSchema } from "@/lib/seo-schema";
 
 const tools = [
   {
@@ -50,6 +52,7 @@ const tools = [
 export default function HomePage() {
   return (
     <div>
+      <JsonLd data={buildWebSiteSchema()} />
       {/* Hero */}
       <section className="border-b border-slate-200 bg-gradient-to-b from-indigo-50/70 via-white to-white py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">

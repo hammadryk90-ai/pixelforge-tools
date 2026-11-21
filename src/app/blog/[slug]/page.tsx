@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import { blogPosts } from "@/lib/blog-data";
 import AdSlot from "@/components/AdSlot";
+import JsonLd from "@/components/JsonLd";
+import { buildArticleSchema } from "@/lib/seo-schema";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -20,6 +22,13 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.description,
+      publishedTime: post.date,
+    },
   };
 }
 
@@ -32,8 +41,16 @@ export default async function BlogPostPage({
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
+  const articleSchema = buildArticleSchema({
+    title: post.title,
+    description: post.description,
+    slug: post.slug,
+    date: post.date,
+  });
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+      <JsonLd data={articleSchema} />
       <Link
         href="/blog"
         className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-indigo-600"

@@ -1,16 +1,34 @@
 import type { Metadata } from "next";
 import ExactKbCompressorTool from "@/components/tools/ExactKbCompressorTool";
 import AdSlot from "@/components/AdSlot";
+import JsonLd from "@/components/JsonLd";
+import { buildToolSchema } from "@/lib/seo-schema";
 
 export const metadata: Metadata = {
   title: "Compress Image to 20KB, 50KB, 100KB or 200KB Online",
   description:
     "Reduce JPG or WebP image size to an exact KB target (20KB, 50KB, 100KB, 200KB) for passport, visa, university, and job portal uploads. 100% private.",
+  alternates: { canonical: "/compress-to-kb" },
 };
 
 export default function CompressToKbPage() {
+  const schema = buildToolSchema({
+    name: "PixelForge Exact KB Image Compressor",
+    description:
+      "Compress JPG or WebP images under exact KB targets like 20KB, 50KB, 100KB, or 200KB for online forms.",
+    path: "/compress-to-kb",
+    faqs: [
+      {
+        question: "How does Exact KB compression work?",
+        answer:
+          "PixelForge automatically tests multiple quality levels and dimensions locally in your browser to fit your photo safely under your chosen KB limit.",
+      },
+    ],
+  });
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+      <JsonLd data={schema} />
       <div className="mb-8 text-center">
         <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
           Compress Image to Exact KB Size
