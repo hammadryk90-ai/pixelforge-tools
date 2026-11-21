@@ -10,4 +10,6 @@ export const siteConfig = {
   supportEmail: "Hammadryk90@gmail.com",
   // Add your Google AdSense Publisher ID in .env.local as NEXT_PUBLIC_ADSENSE_ID=ca-pub-XXXXXXXXXXXXXXXX
   adsenseId: process.env.NEXT_PUBLIC_ADSENSE_ID || "",
+  // Google Tag / Analytics ID
+  googleTagId: process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GTM-KK6WWJ7Z",
 };
