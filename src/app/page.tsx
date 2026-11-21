@@ -18,6 +18,7 @@ import {
 import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import JsonLd from "@/components/JsonLd";
+import MobileShowcaseSection from "@/components/MobileShowcaseSection";
 import { blogPosts } from "@/lib/blog-data";
 import { buildWebSiteSchema } from "@/lib/seo-schema";
 
@@ -410,6 +411,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Installable Mobile & Desktop PWA Showcase */}
+      <MobileShowcaseSection />
 
       {/* Brand Spotlight CTA Banner (Tinify-style) */}
       <section className="mx-auto max-w-6xl px-4 pb-16 pt-4 sm:px-6">
