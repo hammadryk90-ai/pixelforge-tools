@@ -7,12 +7,12 @@ import { Menu, X, Sparkles } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 const navLinks = [
-  { href: "/compress-image", label: "Compress Image" },
-  { href: "/compress-to-kb", label: "Compress to KB" },
-  { href: "/enhance-image", label: "Enhance Quality" },
+  { href: "/compress-image", label: "Compress" },
+  { href: "/compress-to-kb", label: "Exact KB" },
+  { href: "/photo-editor", label: "Photo Editor" },
+  { href: "/enhance-image", label: "Enhance" },
   { href: "/image-to-pdf", label: "Image to PDF" },
   { href: "/blog", label: "Guides" },
-  { href: "/about", label: "About" },
 ];
 
 export default function Header() {

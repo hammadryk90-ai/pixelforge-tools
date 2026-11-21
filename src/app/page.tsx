@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   Minimize2,
   Gauge,
+  SlidersHorizontal,
   Sparkles,
   FileText,
   ShieldCheck,
@@ -30,6 +31,14 @@ const tools = [
       "Hit exact 20KB, 50KB, 100KB, or 200KB limits automatically for passport, visa, and job forms.",
     icon: Gauge,
     badge: "Exact Size",
+  },
+  {
+    href: "/photo-editor",
+    title: "Online Photo Editor",
+    description:
+      "Crop to social or passport ratios, rotate, flip, resize, apply filters, and add text overlays.",
+    icon: SlidersHorizontal,
+    badge: "All-in-One",
   },
   {
     href: "/enhance-image",
@@ -97,7 +106,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {tools.map((tool) => {
             const Icon = tool.icon;
             return (
@@ -197,7 +206,7 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post) => (
             <Link
               key={post.slug}

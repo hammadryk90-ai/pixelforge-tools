@@ -43,6 +43,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/photo-editor" className="hover:text-indigo-600">
+                  Photo Editor
+                </Link>
+              </li>
+              <li>
                 <Link href="/enhance-image" className="hover:text-indigo-600">
                   Image Quality Enhancer
                 </Link>

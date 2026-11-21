@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/compress-image",
     "/compress-to-kb",
+    "/photo-editor",
     "/enhance-image",
     "/image-to-pdf",
     "/blog",

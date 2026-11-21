@@ -239,4 +239,34 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "how-to-edit-crop-and-resize-photos-online-free",
+    title: "How to Crop, Filter & Add Text to Photos Online Without Software",
+    description:
+      "Quick guide to cropping images for Instagram, YouTube, or passport forms, applying color filters, and adding watermarks privately in your browser.",
+    date: "2026-11-22",
+    readTime: "4 min read",
+    category: "Photo Editing",
+    relatedTool: { href: "/photo-editor", label: "Open Photo Editor" },
+    sections: [
+      {
+        heading: "Pick the Right Aspect Ratio First",
+        paragraphs: [
+          "Cropping to the right ratio before sharing prevents awkward automatic cropping on social platforms. Use 1:1 for profile pictures, 4:5 for Instagram portraits, 16:9 for YouTube thumbnails, and 35:45 for passport applications.",
+        ],
+      },
+      {
+        heading: "Keep Filters Subtle & Natural",
+        paragraphs: [
+          "One-click presets like Vivid or Warm give dull photos instant life. If you adjust sliders manually, small changes (+5 to +15 brightness/contrast) look much cleaner than extreme edits.",
+        ],
+      },
+      {
+        heading: "Protect Your Work With a Clean Watermark",
+        paragraphs: [
+          "Adding a semi-transparent text watermark (around 50–70% opacity) at the bottom of product or portfolio photos helps protect your brand without distracting from the image.",
+        ],
+      },
+    ],
+  },
 ];
