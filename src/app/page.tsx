@@ -15,6 +15,7 @@ import {
   Camera,
 } from "lucide-react";
 import AdSlot from "@/components/AdSlot";
+import BrandLogo from "@/components/BrandLogo";
 import JsonLd from "@/components/JsonLd";
 import { blogPosts } from "@/lib/blog-data";
 import { buildWebSiteSchema } from "@/lib/seo-schema";
@@ -394,6 +395,67 @@ export default function HomePage() {
               </p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Brand Spotlight CTA Banner (Tinify-style) */}
+      <section className="mx-auto max-w-6xl px-4 pb-16 pt-4 sm:px-6">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-sky-500 via-indigo-600 to-violet-600 px-6 py-10 text-white shadow-xl shadow-indigo-500/20 sm:px-12 sm:py-12">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/15 blur-3xl"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-20 left-1/3 h-56 w-56 rounded-full bg-amber-300/20 blur-3xl"
+          />
+
+          <div className="relative flex flex-col items-center justify-between gap-8 md:flex-row">
+            <div className="max-w-xl text-center md:text-left">
+              <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
+                Speed up your website with PixelForge
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-indigo-100 sm:text-base">
+                Maximize page speed, improve SEO rankings, convert iPhone HEIC
+                photos, and build crisp PDFs—100% free and private right inside
+                your browser.
+              </p>
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+                <Link
+                  href="/compress-image"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-indigo-700 shadow-sm transition-transform hover:-translate-y-0.5"
+                >
+                  Start Optimizing Free
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/convert-image"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-xs transition-colors hover:bg-white/20"
+                >
+                  Convert Formats
+                </Link>
+              </div>
+            </div>
+
+            {/* Floating Logo Showcase */}
+            <div className="relative flex shrink-0 items-center justify-center p-4">
+              <div className="relative flex h-36 w-36 items-center justify-center rounded-3xl border border-white/30 bg-white/15 shadow-2xl backdrop-blur-md sm:h-40 sm:w-40">
+                <BrandLogo className="h-24 w-24 drop-shadow-lg sm:h-28 sm:w-28" />
+                <span className="absolute -left-5 -top-3 rounded-full bg-white px-2.5 py-1 text-xs font-extrabold text-indigo-700 shadow-md">
+                  WebP
+                </span>
+                <span className="absolute -right-5 top-4 rounded-full bg-amber-300 px-2.5 py-1 text-xs font-extrabold text-slate-900 shadow-md">
+                  HEIC
+                </span>
+                <span className="absolute -bottom-3 -left-3 rounded-full bg-emerald-400 px-2.5 py-1 text-xs font-extrabold text-slate-900 shadow-md">
+                  AVIF
+                </span>
+                <span className="absolute -bottom-3 -right-3 rounded-full bg-rose-400 px-2.5 py-1 text-xs font-extrabold text-white shadow-md">
+                  PDF
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
