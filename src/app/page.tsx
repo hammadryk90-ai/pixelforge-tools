@@ -7,6 +7,8 @@ import {
   Sparkles,
   FileText,
   Files,
+  QrCode,
+  Pipette,
   ShieldCheck,
   Zap,
   Globe,
@@ -106,6 +108,30 @@ const tools = [
     badgeStyle: "bg-teal-50 text-teal-700",
     hoverBorder: "hover:border-teal-300",
     linkColor: "text-teal-600",
+  },
+  {
+    href: "/qr-generator",
+    title: "QR Code Generator",
+    description:
+      "Create permanent, custom-colored QR codes for links, WiFi, email, and text with PNG & SVG export.",
+    icon: QrCode,
+    badge: "PNG & SVG",
+    iconBg: "bg-cyan-100 text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white",
+    badgeStyle: "bg-cyan-50 text-cyan-700",
+    hoverBorder: "hover:border-cyan-300",
+    linkColor: "text-cyan-600",
+  },
+  {
+    href: "/color-picker",
+    title: "Color Picker & Gradients",
+    description:
+      "Pick exact HEX, RGB, and HSL codes from any photo, extract palettes, and generate CSS gradients.",
+    icon: Pipette,
+    badge: "Palette & CSS",
+    iconBg: "bg-fuchsia-100 text-fuchsia-600 group-hover:bg-fuchsia-600 group-hover:text-white",
+    badgeStyle: "bg-fuchsia-50 text-fuchsia-700",
+    hoverBorder: "hover:border-fuchsia-300",
+    linkColor: "text-fuchsia-600",
   },
 ];
 

@@ -66,6 +66,16 @@ export default function Footer() {
                   PDF Toolkit (Merge / Split / Watermark)
                 </Link>
               </li>
+              <li>
+                <Link href="/qr-generator" className="hover:text-indigo-600">
+                  QR Code Generator
+                </Link>
+              </li>
+              <li>
+                <Link href="/color-picker" className="hover:text-indigo-600">
+                  Color Picker &amp; Gradients
+                </Link>
+              </li>
             </ul>
           </div>
 
