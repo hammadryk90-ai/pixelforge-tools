@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QrGeneratorTool from "@/components/tools/QrGeneratorTool";
 import AdSlot from "@/components/AdSlot";
 import JsonLd from "@/components/JsonLd";
+import RelatedTools from "@/components/RelatedTools";
 import { buildToolSchema } from "@/lib/seo-schema";
 
 export const metadata: Metadata = {
@@ -95,6 +96,8 @@ export default function QrGeneratorPage() {
           </div>
         </section>
       </article>
+
+      <RelatedTools currentPath="/qr-generator" />
     </div>
   );
 }

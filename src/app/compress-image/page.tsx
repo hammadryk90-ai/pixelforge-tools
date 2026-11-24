@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ImageCompressorTool from "@/components/tools/ImageCompressorTool";
 import AdSlot from "@/components/AdSlot";
 import JsonLd from "@/components/JsonLd";
+import RelatedTools from "@/components/RelatedTools";
 import { buildToolSchema } from "@/lib/seo-schema";
 
 export const metadata: Metadata = {
@@ -111,6 +112,8 @@ export default function CompressImagePage() {
           </div>
         </section>
       </article>
+
+      <RelatedTools currentPath="/compress-image" />
     </div>
   );
 }

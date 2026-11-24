@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ImageConverterTool from "@/components/tools/ImageConverterTool";
 import AdSlot from "@/components/AdSlot";
 import JsonLd from "@/components/JsonLd";
+import RelatedTools from "@/components/RelatedTools";
 import { buildToolSchema } from "@/lib/seo-schema";
 
 export const metadata: Metadata = {
@@ -115,6 +116,8 @@ export default function ConvertImagePage() {
           </div>
         </section>
       </article>
+
+      <RelatedTools currentPath="/convert-image" />
     </div>
   );
 }

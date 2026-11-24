@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ImageEnhancerTool from "@/components/tools/ImageEnhancerTool";
 import AdSlot from "@/components/AdSlot";
 import JsonLd from "@/components/JsonLd";
+import RelatedTools from "@/components/RelatedTools";
 import { buildToolSchema } from "@/lib/seo-schema";
 
 export const metadata: Metadata = {
@@ -106,6 +107,8 @@ export default function EnhanceImagePage() {
           </div>
         </section>
       </article>
+
+      <RelatedTools currentPath="/enhance-image" />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ColorPickerTool from "@/components/tools/ColorPickerTool";
 import AdSlot from "@/components/AdSlot";
 import JsonLd from "@/components/JsonLd";
+import RelatedTools from "@/components/RelatedTools";
 import { buildToolSchema } from "@/lib/seo-schema";
 
 export const metadata: Metadata = {
@@ -84,6 +85,8 @@ export default function ColorPickerPage() {
           </div>
         </section>
       </article>
+
+      <RelatedTools currentPath="/color-picker" />
     </div>
   );
 }

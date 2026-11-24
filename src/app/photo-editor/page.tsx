@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PhotoEditorTool from "@/components/tools/PhotoEditorTool";
 import AdSlot from "@/components/AdSlot";
 import JsonLd from "@/components/JsonLd";
+import RelatedTools from "@/components/RelatedTools";
 import { buildToolSchema } from "@/lib/seo-schema";
 
 export const metadata: Metadata = {
@@ -121,6 +122,8 @@ export default function PhotoEditorPage() {
           </div>
         </section>
       </article>
+
+      <RelatedTools currentPath="/photo-editor" />
     </div>
   );
 }
