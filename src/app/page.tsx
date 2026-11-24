@@ -21,6 +21,7 @@ import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import JsonLd from "@/components/JsonLd";
 import MobileShowcaseSection from "@/components/MobileShowcaseSection";
+import QuickCompressHero from "@/components/tools/QuickCompressHero";
 import { blogPosts } from "@/lib/blog-data";
 import { buildWebSiteSchema } from "@/lib/seo-schema";
 
@@ -205,7 +206,10 @@ export default function HomePage() {
             browser. Reduce file sizes, edit and sharpen photos, and build
             multi-page PDFs without ever uploading your files.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
+
+          <QuickCompressHero />
+
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/compress-image"
               className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-6 py-3.5 text-sm font-semibold text-white shadow-md shadow-indigo-500/20 transition-all hover:brightness-110"

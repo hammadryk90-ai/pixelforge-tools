@@ -299,4 +299,34 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "how-to-fix-compressed-or-blurry-photo-online",
+    title: "How to Fix a Compressed or Blurry Photo Online for Free",
+    description:
+      "Restore sharpness, clarity, and resolution to over-compressed WhatsApp, Facebook, or low-resolution photos directly in your browser without uploading files.",
+    date: "2026-11-24",
+    readTime: "4 min read",
+    category: "Enhancement",
+    relatedTool: { href: "/enhance-image", label: "Fix Compressed Photo Now" },
+    sections: [
+      {
+        heading: "Why Messaging Apps Make Photos Look Blurry",
+        paragraphs: [
+          "When photos are shared through WhatsApp, Messenger, or social media feeds, those platforms aggressively shrink dimensions and strip fine edge detail to save bandwidth. The result is a soft, washed-out, or pixelated image—especially noticeable on faces and document text.",
+        ],
+      },
+      {
+        heading: "How to Restore Clarity in 3 Quick Steps",
+        paragraphs: [
+          "Open PixelForge's Image Quality Enhancer and drop your compressed photo in. First, select 1.5x or 2x Resolution Upscale to smoothly expand the pixel grid. Next, set Sharpness between 40% and 55% to bring back crisp edges without harsh artifacts. Finally, bump Contrast by +10 to +15 and use the live Before/After slider to verify the improvement.",
+        ],
+      },
+      {
+        heading: "Save in High-Quality PNG or JPEG",
+        paragraphs: [
+          "Once the photo looks clean, export it as Lossless PNG if it contains text or logos, or High-Quality JPEG for portraits and everyday photos. Because every step runs locally in your browser, your personal pictures never touch an external server.",
+        ],
+      },
+    ],
+  },
 ];
