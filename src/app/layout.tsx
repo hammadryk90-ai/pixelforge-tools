@@ -75,10 +75,21 @@ export default function RootLayout({
             />
             <Script id="google-analytics-init" strategy="afterInteractive">
               {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${siteConfig.gaMeasurementId}');
+                (function() {
+                  try {
+                    var params = new URLSearchParams(window.location.search);
+                    if (params.get('notrack') === '1') localStorage.setItem('pf_notrack', '1');
+                    if (params.get('notrack') === '0') localStorage.removeItem('pf_notrack');
+                    if (localStorage.getItem('pf_notrack') === '1') {
+                      window['ga-disable-${siteConfig.gaMeasurementId}'] = true;
+                      return;
+                    }
+                  } catch (e) {}
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${siteConfig.gaMeasurementId}');
+                })();
               `}
             </Script>
           </>
